@@ -1,0 +1,81 @@
+{
+  "tools": [
+    {
+      "id": "dreamy-cover",
+      "name": "Dreamy Cover",
+      "nameEn": "Dreamy Cover & AI Edit",
+      "nameCn": "抖音封面生成器",
+      "description": "生成梦幻声波美学风格的抖音封面，支持 AI 智能编辑",
+      "descriptionEn": "Generate eye-catching Douyin thumbnails with dreamy soundwave aesthetics",
+      "category": "图像生成",
+      "tags": ["封面", "抖音", "AI", "视频", "Thumbnail"],
+      "icon": "🎨",
+      "thumbnail": "/assets/thumbnails/dreamy-cover.png",
+      "path": "/dreamy-cover/",
+      "featured": true,
+      "hot": 5280,
+      "addedDate": "2025-01-15",
+      "author": "AI Studio",
+      "version": "1.0.0"
+    },
+    {
+      "id": "icongen-ai",
+      "name": "IconGen AI",
+      "nameEn": "IconGen AI",
+      "nameCn": "AI 图标生成器",
+      "description": "遵循 3:4 比例指南的应用图标生成器，AI 驱动样式设计",
+      "descriptionEn": "Custom app icon generator with 3:4 ratio guidelines, AI-powered styling",
+      "category": "图标设计",
+      "tags": ["图标", "App", "AI", "设计", "Icon"],
+      "icon": "🔲",
+      "thumbnail": "/assets/thumbnails/icongen-ai.png",
+      "path": "/icongen-ai/",
+      "featured": true,
+      "hot": 3420,
+      "addedDate": "2025-02-01",
+      "author": "AI Studio",
+      "version": "3.2.0"
+    }
+  ],
+  "categories": [
+    {
+      "id": "image-gen",
+      "name": "图像生成",
+      "nameEn": "Image Generation",
+      "icon": "🖼️",
+      "count": 1
+    },
+    {
+      "id": "icon-design",
+      "name": "图标设计",
+      "nameEn": "Icon Design",
+      "icon": "🎯",
+      "count": 1
+    },
+    {
+      "id": "ai-edit",
+      "name": "AI 编辑",
+      "nameEn": "AI Editing",
+      "icon": "✨",
+      "count": 0
+    },
+    {
+      "id": "audio",
+      "name": "音频处理",
+      "nameEn": "Audio Processing",
+      "icon": "🎵",
+      "count": 0
+    }
+  ],
+  "settings": {
+    "siteName": "AI Tools Collection",
+    "siteNameCn": "AI 工具集合",
+    "tagline": "一键访问所有 AI 创作工具",
+    "taglineEn": "Access all AI creative tools in one place",
+    "description": "精选 AI 工具集合，包含图像生成、图标设计、AI 编辑等多个类别",
+    "keywords": ["AI", "工具", "图像生成", "图标设计", "封面", "AI Tools"],
+    "author": "Your Name",
+    "githubUrl": "https://github.com/yourusername/toolPages",
+    "featuredTools": ["dreamy-cover", "icongen-ai"]
+  }
+}

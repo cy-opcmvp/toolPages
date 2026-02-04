@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Build dreamy-cover
+        run: |
+          cd dreamy-cover
+          npm install
+          npm run build
+
+      - name: Build icongen-ai
+        run: |
+          cd icongen-ai
+          npm install
+          npm run build
+
+      - name: Build ai-tools-portal
+        run: |
+          cd ai-tools-portal
+          npm install
+          npm run build
+
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p deploy
+          cp -r dreamy-cover/dist deploy/dreamy-cover
+          cp -r icongen-ai/dist deploy/icongen-ai
+          cp -r ai-tools-portal/dist/* deploy/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './deploy'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,5 @@
+{
+  "name": "IconGen AI",
+  "description": "A custom app icon generator following specific 3:4 ratio guidelines, enhanced with Gemini 2.5 Flash Image for AI-powered editing and styling.",
+  "requestFramePermissions": []
+}
